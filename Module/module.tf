@@ -1,5 +1,5 @@
 module "EC2" {
-    source = Resource/EC2/
+    source = ~/terraform/Resource/EC2/
     this_key_name = "sample"
     this_ami ="ami-0ea1cddefe0c4aed5"
     This_instance_type = "t3.micro"
@@ -10,7 +10,7 @@ module "EC2" {
 }
 
 module "VPC" {
-    source = Resource/VPC
+    source = ~/terraform/Resource/VPC
     thisvpc_cidr ="172.30.0.0/16"
     cbz_subnet = "172.30.0.0/20"
 
